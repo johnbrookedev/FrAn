@@ -14,19 +14,20 @@
 import sys
 import os
 
-os.chdir('/Users/jbrooke/Documents/projects/FrAn')
+# os.chdir('/Users/jbrooke/Documents/projects/FrAn')
 
 
 from PIL import Image
-import PyX 
+from pyx import *
 #import psyco
 import franTools
 import imrand
 #from readcol import *
+#import matplotlib.pyplot as graph
 
 
 #psyco.full()
-text.set(lfs="foils17pt")
+# text.set(lfs="foils17pt")
 
 class Fractal:
     """A Fractal Image"""
@@ -187,7 +188,7 @@ class Fractal:
         mainName = os.path.splitext(self.filename)[0]
         graph1 = graph.graphxy(width=16,
             x=graph.axis.linear(title="Relative threshold value"),
-            y=graph.axis.linear(title="Fractal Excess"))
+            y=graph.axis.linear(min=0, max=1, title="Fractal Excess"))
         graph1.plot(graph.data.file(self.datafilename,x=2,y=6),
             [graph.style.symbol(symbol=graph.style.symbol.triangle,size=0.3,
             symbolattrs=[deco.filled([color.rgb.blue])])])

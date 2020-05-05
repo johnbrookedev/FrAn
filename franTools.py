@@ -16,7 +16,7 @@
 import sys
 from PIL import Image
 from math import log, exp
-from PyX import * # Module to make plots
+from pyx import * # Module to make plots
 #import psyco
 import copy
 
